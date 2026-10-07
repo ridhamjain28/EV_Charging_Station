@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Charging System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>EV Charging System</h1>
+        <p>Pune EV Station</p>
+    </div>
+    <div class="status"><span class="dot"></span>System Online</div>
+</header>
+
+<main>
+
+    <section class="summary">
+        <div class="card"><span>Wallet Balance</span><strong id="wallet">₹0</strong></div>
+        <div class="card"><span>Available Chargers</span><strong id="availableCount">0</strong></div>
+        <div class="card"><span>Booked Chargers</span><strong id="bookedCount">0</strong></div>
+        <div class="card"><span>Station Revenue</span><strong id="revenue">₹0</strong></div>
+    </section>
+
+    <section class="layout">
+
+        <div class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Customer</h2>
+                    <p>Register your vehicle</p>
+                </div>
+            </div>
+
+            <form id="registerForm">
+                <label>Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Vehicle Number</label>
+                <input type="text" id="vehicle" required>
+
+                <label>Vehicle Type</label>
+                <select id="vehicleType" required>
+                    <option value="">Select Vehicle Type</option>
+                    <option value="2-Wheeler">2-Wheeler</option>
+                    <option value="4-Wheeler">4-Wheeler</option>
+                </select>
+
+                <button type="submit">Register Customer</button>
+            </form>
+
+            <div id="customerDetails" class="details"></div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Wallet</h2>
+                    <p>Add balance for charging</p>
+                </div>
+            </div>
+
+            <form id="walletForm">
+                <label>Amount</label>
+                <input type="number" id="amount" min="1" step="1" placeholder="Enter amount" required>
+                <button type="submit">Add Money</button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class="panel">
+        <div class="panel-header">
+            <div>
+                <h2>Chargers</h2>
+                <p>Only chargers compatible with your vehicle can be booked.</p>
+            </div>
+        </div>
+        <div id="chargerList" class="charger-grid"></div>
+    </section>
+
+    <section class="panel">
+        <div class="panel-header">
+            <div>
+                <h2>Reservations</h2>
+                <p>Your booking history</p>
+            </div>
+        </div>
+        <div id="reservationList"></div>
+    </section>
+
+</main>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2 id="modalTitle">Book Charger</h2>
+            <button onclick="closeModal()">×</button>
+        </div>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div id="message" class="message hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
