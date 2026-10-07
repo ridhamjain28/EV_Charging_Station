@@ -58,7 +58,7 @@ javac -d out src\User.java src\Customer.java src\Admin.java src\Charger.java src
 
 Open:
 
-text
+
 http://localhost:8080
 
 
@@ -73,37 +73,6 @@ http://localhost:8080
 - ArrayList
 - Object Relationships
 
-## Booking Flow
-
-
-
-Register Customer
-       ↓
-Select Vehicle Type
-       ↓
-Add Money to Wallet
-       ↓
-View Compatible Chargers
-       ↓
-Select Charger
-       ↓
-Select Charging Duration
-       ↓
-Check Wallet Balance
-       ↓
-Book Charger
-       ↓
-Reservation Created
-
-
-## Cancellation
-
-When a booking is cancelled:
-
-- 80% of the booking amount is refunded.
-- 20% is retained as a cancellation charge.
-- The charger becomes available again.
-- Station revenue is adjusted.
 
 ## Project Status
 
