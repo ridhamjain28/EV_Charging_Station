@@ -31,38 +31,13 @@ The system allows customers to register their EV, add money to a wallet, view co
 - JavaScript
 - Git & GitHub
 
-## Project Structure
-
-text
-EVChargingSystem/
-│
-├── src/
-│   ├── User.java
-│   ├── Customer.java
-│   ├── Admin.java
-│   ├── Charger.java
-│   ├── ChargingStation.java
-│   ├── Reservation.java
-│   ├── EVChargingSystem.java
-│   └── Main.java
-│
-├── server/
-│   └── WebServer.java
-│
-├── web/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-└── README.md
-
 
 ## How to Run
 
 ### 1. Clone the repository
 
 
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/ridhamjain28/EV_Charging_Station/
 cd EVChargingSystem
 
 
@@ -75,7 +50,7 @@ javac -d out src\User.java src\Customer.java src\Admin.java src\Charger.java src
 ### 3. Start the web server
 
 
-java -cp out WebServer
+**java -cp out WebServer**
 
 
 ### 4. Open the application
