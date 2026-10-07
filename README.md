@@ -38,6 +38,7 @@ The system allows customers to register their EV, add money to a wallet, view co
 
 
 git clone https://github.com/ridhamjain28/EV_Charging_Station/
+
 cd EVChargingSystem
 
 
